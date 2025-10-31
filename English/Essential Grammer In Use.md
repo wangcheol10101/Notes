@@ -25,7 +25,7 @@
 - As Adverbs (Expressing Purpose or Reason)  
     > He went to the store to buy milk. (purpose)  
     > She studied hard to pass the exam.  
-    This is often replaceable with “in order to.”
+    This is often replaceable with “in order to.”  
 
 **Types of Infinitive Clauses**
 - Full (To-) Infinitive Clauses  
@@ -209,6 +209,13 @@ You can omit it when it’s the **object** of the relative clause.
 - Informal (move preposition to end)  
     > The person who I spoke to was kind.  
 
+**Nominal(free) Relative Clause**  
+A nominal relative clause = relative pronoun + clause, used as a **noun** in a sentence. 
+Nominal relative clauses **can function in all noun positions**.   
+> What you said is true.  
+It’s free (or nominal) because it doesn’t depend on an earlier noun, unlike an ordinary relative clause.  
+It replaces the noun completely — acts as a noun clause.  
+
 ## Participle  
 A participle is a verb form used as an **adjective (to describe a noun)** or as part of a verb phrase.  
 - Present participle
@@ -223,11 +230,32 @@ A participle is a verb form used as an **adjective (to describe a noun)** or as 
 - As adjectives  
     > The crying baby is hungry.  
     > The broken window needs repair.  
+    It functions like a reduced relative clause  
+    > The base table that is being created -> Reduced to “the base table being created.”  
 - As participial phrases  
     These describe or **add information about a noun or about the whole sentence**.  
     > Walking down the street, I saw a friend.  
     > Tired from work, he went straight to bed.  
     ⚠️ Important: The subject of the participial phrase must be the same as the subject of the main clause.  
+- Absolute construction  
+    independent phrase giving background information.  
+    > Weather permitting, we’ll go out.  
+- As Object Complements  
+    > I caught him stealing.  
+    ⚠️ Not all verbs can do this! Certain verbs of perception, discovery, or imagination can take this structure.  
+    - Perception verbs (see, hear, watch, notice, feel, find, observe, smell, catch)  
+        > “I saw him running.” / “We heard her singing.” / “I caught him cheating.”  
+    - Discovery verbs (find, discover, leave, keep)  
+        > “We found her crying.” / “He kept me waiting.”  
+    - Causative verbs (have, get, keep) — slightly different nuance  
+        > “She had me laughing all night.” / “He kept us waiting.”  
+    ⚠️ The difference between “I saw him sing” (bare infinitive) and “I saw him singing” (present participle)  
+    - bare infinitive  
+        Whole, complete action  
+        You saw the entire event from beginning to end.  
+    - present participle
+        Ongoing, partial action  
+        You saw the person in the middle of the action, not necessarily the whole thing.  
 
 **Gerund vs. Present Participle**  
 Ask:
@@ -240,16 +268,70 @@ A prepositional phrase is a group of words that:
 - and ends with the **object of the preposition** (a noun, pronoun, or noun phrase).  
 > in the morning → “in” (preposition) + “the morning” (object)  
 
-A prepositional phrase functions as either:  
-- an adjective (modifying a noun), or  
-- an adverb (modifying a verb, adjective, or another adverb).  
-
+**Prepositional phrase functions**  
 - As an Adjective Phrase  
     Noun + [Prepositional phrase] = expanded noun phrase.  
     Describes or gives more information about a noun.  
     > The book on the table is mine.  
-- As an Adverb Phrase
+- As an Adverb Phrase  
     Verb + [Prepositional phrase] = more detail about the action.  
     Describes where, when, how, or why something happens (modifies a verb).  
     > He spoke with great confidence.  
     > They left because of the rain.  
+- Complement roles  
+    - Verb complement  
+        Certain verbs require a prepositional phrase to complete their meaning.  
+        > It depends on you.  
+        > She listens to music.  
+        Compare with adverbial prepositional phrase  
+        - Verb complement  
+            > It depends on you.  
+            “on you” is **necessary for meaning**  
+        - Adverbial  
+            > I waited for an hour.  
+            “for an hour” adds extra info but is **not required to understand the verb “waited”**  
+    - Adjective complement  
+        > She is afraid of spiders.  
+        > I’m interested in music.  
+    - Complement of a noun  
+        > the question about grammar  
+        > the destruction of the city  
+    - Subject complement  
+        > The book is on the table.  
+        > He’s under pressure.  
+    - Object complement  
+        > They elected him as president.  
+        > I regard her as a friend.  
+
+## Object Complement
+An object complement is a word or phrase (noun, adjective, or infinitive ...) that comes after the direct object and gives more information about that object — it renames it or describes its state or result.  
+| Type of complement | Example                        |
+| ------------------ | ------------------------------ |
+| Noun               | “They elected him **leader**.” |
+| Adjective          | “They found her **tired**.”    |
+| Bare infinitive    | “We saw him **run**.”          |
+| Participle         | “I caught him **stealing**.”   |
+
+## Reduced Clauses  
+A reduced clause is a shortened form of a full clause — some words (usually **the subject and/or auxiliary verb**) are omitted because the meaning is still clear from context.  
+> If it is taken literally, the phrase makes no sense. -> If taken literally, the phrase makes no sense.  
+> As it was noted in Chapter 4, this is true. -> As noted in Chapter 4, this is true.  
+
+**Major Types of Reduced Clauses**  
+- Reduced Relative Clauses  
+    > Students who are studying hard will pass. -> Students studying hard will pass.  
+    > The book that was written by Orwell is famous. -> The book written by Orwell is famous.  
+- Reduced Adverbial Clauses  
+    - Active Reduction  
+        If **the adverbial clause’s subject = the main clause’s subject, and the verb is active**, → you can remove the subject and auxiliary, and make the verb **-ing form**.  
+        > After he finished his homework, he watched TV. -> After finishing his homework, he watched TV.  
+    - Passive Reduction  
+        If the clause is passive, you keep the past participle.  
+        > As it was mentioned earlier, this is crucial. -> As mentioned earlier, this is crucial.  
+        > When it is completed, the project will start. -> When completed, the project will start.  
+    - Perfect Reduction  
+        If the action in the adverbial clause happens **before** the action in the main clause, you can use **having + past participle**.  
+        > Since they had seen the movie, they stayed home. -> Having seen the movie, they stayed home.  
+
+## Subordinate Conjunctions  
+## Adverbial Clauses
