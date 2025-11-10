@@ -14,7 +14,26 @@
     > The best thing would be to apologize.  
 - As Direct Objects  
     > I want to learn Spanish.  
-    > She promised to help us.
+    > She promised to help us.  
+- As Verb Complements
+    Common verbs that take infinitive clauses as complements  
+    - Desire/intention  
+        want, wish, hope, plan, intend, decide  
+        > I want to go.  
+    - Promise/offer/refuse  
+        promise, agree, refuse, offer  
+        > She agreed to help.  
+    - Attempt/effort  
+        try, attempt, fail, manage  
+        > He tried to open the door.  
+    - Perception or mental state  
+        expect, believe, know, remember  
+        > I expect to see her soon.  
+    - Communication  
+        ask, tell, advise, persuade (+ object)  
+        > He told me to wait.  
+- As Adjective Complements  
+    > I’m happy to see you.  
 - As Object Complements  
     > We elected him to lead the team.  
     > I heard her sing a song. (bare infinitive)  
@@ -26,6 +45,7 @@
     > He went to the store to buy milk. (purpose)  
     > She studied hard to pass the exam.  
     This is often replaceable with “in order to.”  
+    > They make the argument easier **to follow**. (adverbial function of modifying the adjective)  
 
 **Types of Infinitive Clauses**
 - Full (To-) Infinitive Clauses  
@@ -213,6 +233,7 @@ You can omit it when it’s the **object** of the relative clause.
 A nominal relative clause = relative pronoun + clause, used as a **noun** in a sentence. 
 Nominal relative clauses **can function in all noun positions**.   
 > What you said is true.  
+> I’m interested in what he does.  
 It’s free (or nominal) because it doesn’t depend on an earlier noun, unlike an ordinary relative clause.  
 It replaces the noun completely — acts as a noun clause.  
 
@@ -265,7 +286,7 @@ Ask:
 ## Prepositional phrase
 A prepositional phrase is a group of words that:  
 - begins with a preposition (like in, on, at, by, with, from, about, after, before, etc.)  
-- and ends with the **object of the preposition** (a noun, pronoun, or noun phrase).  
+- and ends with the **object of the preposition (a noun, pronoun, or noun phrase)**.  
 > in the morning → “in” (preposition) + “the morning” (object)  
 
 **Prepositional phrase functions**  
@@ -278,6 +299,8 @@ A prepositional phrase is a group of words that:
     Describes where, when, how, or why something happens (modifies a verb).  
     > He spoke with great confidence.  
     > They left because of the rain.  
+    Adverbs modify the entire clause  
+    > Even for you, this task is difficult.  
 - Complement roles  
     - Verb complement  
         Certain verbs require a prepositional phrase to complete their meaning.  
@@ -333,5 +356,22 @@ A reduced clause is a shortened form of a full clause — some words (usually **
         If the action in the adverbial clause happens **before** the action in the main clause, you can use **having + past participle**.  
         > Since they had seen the movie, they stayed home. -> Having seen the movie, they stayed home.  
 
-## Subordinate Conjunctions  
-## Adverbial Clauses
+## Adverbial Clauses  
+A clause introduced by a **subordinating conjunction**, which cannot stand alone as a sentence and depends on a main clause. it functions like an **adverb**, modifying a verb, adjective, or whole clause.  
+> I stayed home because it was raining.  
+
+**Subordinating conjunctions**  
+| Function / Meaning        | Common Subordinating Conjunctions             | Example                                     |
+| ------------------------- | --------------------------------------------- | ------------------------------------------- |
+| **Time**                  | when, while, before, after, since, until      | “I left **after she arrived**.”             |
+| **Cause / Reason**        | because, since, as                            | “I’m late **because the bus was late**.”    |
+| **Condition**             | if, unless, provided that, in case            | “I’ll call you **if I’m free**.”            |
+| **Contrast / Concession** | although, though, even though, whereas, while | “**Although it rained**, we went hiking.”   |
+| **Purpose / Result**      | so that, in order that                        | “I whispered **so that he wouldn’t hear**.” |
+| **Place**                 | where, wherever                               | “Sit **where you like**.”                   |
+| **Manner / Comparison**   | as, as if, as though                          | “He runs **as if he were in a race**.”      |
+
+## Relative-like Clauses  
+A relative-like clause is a clause that modifies a noun or noun phrase (like a relative/adjective clause) but is introduced by words other than the classic relative pronouns(it may use as, as if, as though, the way, the manner instead of standard relative pronouns).  
+> I’ll start with the relational model as Codd originally defined it.  
+
