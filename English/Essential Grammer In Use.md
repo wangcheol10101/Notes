@@ -16,7 +16,7 @@
     > I want to learn Spanish.  
     > She promised to help us.  
 - As Verb Complements
-    Common verbs that take infinitive clauses as complements  
+    Common verbs that take infinitive clauses as complements   
     - Desire/intention  
         want, wish, hope, plan, intend, decide  
         > I want to go.  
@@ -46,6 +46,10 @@
     > She studied hard to pass the exam.  
     This is often replaceable with “in order to.”  
     > They make the argument easier **to follow**. (adverbial function of modifying the adjective)  
+- Free-standing infinitive phrase used adverbially  
+    functions as an adverbial expression of purpose or comment on the act of speaking/writing.  
+    > To repeat, this approach is not recommended.  
+    > To be clear, I didn’t mean that.  
 
 **Types of Infinitive Clauses**
 - Full (To-) Infinitive Clauses  
@@ -253,6 +257,8 @@ A participle is a verb form used as an **adjective (to describe a noun)** or as 
     > The broken window needs repair.  
     It functions like a reduced relative clause  
     > The base table that is being created -> Reduced to “the base table being created.”  
+- As adverbs
+    > It generally has two closely related meanings **depending on the context**.  
 - As participial phrases  
     These describe or **add information about a noun or about the whole sentence**.  
     > Walking down the street, I saw a friend.  
@@ -328,12 +334,29 @@ A prepositional phrase is a group of words that:
 
 ## Object Complement
 An object complement is a word or phrase (noun, adjective, or infinitive ...) that comes after the direct object and gives more information about that object — it renames it or describes its state or result.  
-| Type of complement | Example                        |
-| ------------------ | ------------------------------ |
-| Noun               | “They elected him **leader**.” |
-| Adjective          | “They found her **tired**.”    |
-| Bare infinitive    | “We saw him **run**.”          |
-| Participle         | “I caught him **stealing**.”   |
+- Noun  
+    > They elected him **leader**.  
+- Adjective  
+    > They found her **tired**.  
+- Bare infinitive  
+    > We saw him **run**.  
+- Participle  
+    > I caught him **stealing**.  
+    > She found her keys **lying on the table**.   
+    > He got his car **fixed**.  
+
+## Adjective Complement  
+- Prepositional phrase  
+    > She’s afraid **of spiders.**  
+    > I’m interested **in learning.**  
+- Nominal relative clause / Noun Clause  
+    > I’m sure **(that) he’s right.**  
+    > I’m not sure **where he went.**  
+    > I am happy **that you are here**.  
+- Infinitive clause  
+    > I’m happy **to help.**  
+- Gerund  
+    > She’s busy **studying.**  
 
 ## Reduced Clauses  
 A reduced clause is a shortened form of a full clause — some words (usually **the subject and/or auxiliary verb**) are omitted because the meaning is still clear from context.  
@@ -372,6 +395,156 @@ A clause introduced by a **subordinating conjunction**, which cannot stand alone
 | **Manner / Comparison**   | as, as if, as though                          | “He runs **as if he were in a race**.”      |
 
 ## Relative-like Clauses  
-A relative-like clause is a clause that modifies a noun or noun phrase (like a relative/adjective clause) but is introduced by words other than the classic relative pronouns(it may use as, as if, as though, the way, the manner instead of standard relative pronouns).  
+A relative-like clause is a clause that **modifies a noun or noun phrase** (like a relative/adjective clause) **but is introduced by words other than the classic relative pronouns**(it may use as, as if, as though, the way, the manner instead of standard relative pronouns).  
 > I’ll start with the relational model as Codd originally defined it.  
+
+## Comparative Clause
+A comparative clause is a subordinate clause introduced by a comparative word or phrase (like than, as … as, the more … the more, etc.) to complete a comparison.  
+
+**Basic structure**  
+[Main clause with a comparative word] + [Subordinate comparative clause]  
+> She runs faster **than I do**.  
+> He is as tall **as his brother is**.  
+
+**Types of Comparative Clauses**  
+- “than” clause  
+    > She’s taller than I am.  
+- “as … as” clause  
+    > He’s as tall as I am.  
+- Double comparative  
+    > The more you study, the smarter you get.  
+
+## Causative Verb Patterns  
+- Make  
+    "make" is forceful and does not use "to".  
+    - Action: make + object + bare infinitive  
+        > The teacher made the students write the essay.  
+    - State: make + object + adjective/past participle  
+        > His apology made the matter settled.  
+- Let  
+    It also uses a bare infinitive but is almost exclusively for actions, not states.  
+    - Action: let + object + bare infinitive  
+        > My parents don't let me stay out late.  
+- Have  
+    - Action (arranging/experiencing): have + object + bare infinitive  
+        > I'll have my assistant call you.  
+    - State/Passive  
+        > I need to have my car repaired  
+- Get  
+    - Action (persuasion): get + object + to-infinitive  
+        > How can I get my brother to clean his room?  
+    - State/Passive (arranging): get + object + past participle  
+        > I need to get my car repaired.  
+
+## Prepositional Verb  
+A prepositional verb is a combination of a verb + a preposition. Together, they create a link to a direct object. The verb usually keeps its original meaning, but it requires that specific preposition to connect to the noun that follows it.  
+
+**Rules of Prepositional Verbs**  
+- They are Inseparable  
+    You cannot put the object between the verb and the preposition. The two words are glued together.  
+    > I am listening to music. ✔️  
+    > I am listening music to. ❌  
+- They Must Have an Object  
+- The Preposition is Fixed  
+    English usually dictates exactly which preposition goes with which verb. There is often no logical reason for this; it must be memorized.  
+
+**Common Examples**
+> I am waiting for a package.  
+> He asked for a glass of water.  
+> I need to talk to your manager.  
+> I can't concentrate on my work.  
+> Did you participate in the game?  
+
+## Phrasal Verb  
+A Phrasal Verb is a combination of a Verb + a Particle(technically functioning as an Adverb, like up, on, off).  
+The most important thing about phrasal verbs is that they **create a completely new meaning**. The meaning of the phrase is usually different from the individual words.  
+> give up  
+
+**The difference between a Prepositional Verb and a Phrasal Verb**  
+- The "Movement" Rule    
+    - Phrasal Verbs are often SEPARABLE. You can put the object between the verb and the particle.  
+        > Turn the light on.  
+    - Prepositional Verbs are INSEPARABLE.  
+- The "Pronoun" Rule  
+    - Phrasal Verb: The pronoun MUST go in the middle.  
+        > Turn it on. ✔️  
+        > Turn on it. ❌  
+    - Prepositional Verb: The pronoun MUST go at the end.  
+        > Listen to it.  
+- The Object Requirement  
+    - Prepositional Verbs almost always require an object.  
+    - Phrasal Verbs often do not need an object at all  
+
+## Noun Clause  
+A Noun Clause is a dependent clause that functions exactly like a single noun.  
+> I know where you live.  
+
+**The Markers (Starters)**  
+- That (for statements/facts): I think that it is raining.  
+- If / Whether (for Yes/No questions): I don't know if he is coming.  
+- Wh- Words (for information questions): Who, What, Where, When, Why, How, Which, Whose.   
+
+**Grammar Rules**  
+- Word Order  
+    > Tell me what you bought. ✔️  
+    > Tell me what did you buy. ❌  
+- The Subjunctive Mood(虚拟式)  
+    After verbs of command, suggestion, or urgency (suggest, insist, recommend, demand), the verb in the noun clause must be in the base form (bare infinitive). This is called the Subjunctive.  
+    > I suggest that he **leave** now.  
+    > The doctor recommended that she **be** more active.  
+- Whether  
+    "Whether" is required in two spots  
+    - After a preposition  
+        > I am thinking about whether I should go. (NOT: about if).  
+    - Before an infinitive  
+        > I don't know whether to stay or go. (NOT: if to stay).  
+
+**The difference between a Noun Clause and a Nominal Relative Clause**  
+Noun Clause: Replaces a noun. / Relative Clause: Describes a noun.  
+- I visited where you live.  
+    Here, it is definitely a Nominal Relative Clause.  
+    It allows you to substitute "where" with **"the place where."**  
+- I wonder where you live.  
+    Here, it is definitely a Noun Clause.  
+    Because you are thinking about the question/answer. You cannot "wonder a place."  
+
+## Wh-Infinitive Phrase (Interrogative Infinitive)  
+A Wh-Infinitive Phrase is a grammatical structure that **combines a question word (Wh-word) with a to-infinitive verb**.  
+It is a **shortened version of a noun clause involving obligation or possibility** (words like should, can, or could).  
+Like a noun clause, the Wh-Infinitive functions as a noun.  
+> I don't know what I should do. -> I don't know what to do.  
+> Can you tell me how I can get there? -> Can you tell me how to get there?  
+
+**Crucial Rules**
+- You cannot use "why" with an infinitive. You must use a full clause.  
+    > I don't know why to leave. ❌  
+    > I don't know why I should leave. ✔️  
+- NO "If"  
+    > I am deciding if to buy it. ❌  
+    > I am deciding whether to buy it. ✔️  
+
+**Who is doing the action?**  
+Usually, the person doing the infinitive action is the Subject of the main sentence.  
+    > I want to know how to drive. (I want to know, and I will drive).  
+However, if there is an Indirect Object in the sentence, the hidden subject shifts to that Object.  
+    > I told John where to go. (I told John where he (John) should go.)  
+    > The teacher taught us how to write. (The teacher taught us how we should write.)  
+
+## Adverbial Nouns  
+**The "Invisible Preposition" Rule**  
+In English, certain nouns allow us to drop the preposition that usually comes before them.  
+> Full Grammatical Logic: "You build your database [in] that way."  
+> Spoken Reality: "You build your database that way."  
+
+**Common Categories of Adverbial Nouns**  
+- Time (Answering "When" or "How long")  
+    > I studied [for] all night.  
+- Distance/Measurement (Answering "How far" or "How much")  
+    > We walked [for] five miles.  
+- Place (Answering "Where")  
+    > Let's go [to] home.  
+- Manner (Answering "How")  
+    > Don't look at me [in] that way.  
+
+
 
