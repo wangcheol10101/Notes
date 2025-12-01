@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini Smart Dictionary</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .clickable-word {
+            cursor: pointer;
+            transition: color 0.2s, background-color 0.2s;
+            border-radius: 2px;
+            padding: 0 1px;
+        }
+        .clickable-word:hover {
+            color: #2563eb;
+            background-color: #eff6ff;
+            text-decoration: underline;
+        }
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3b82f6;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        /* Markdown specific styles for generated content */
+        .content-area h2 { font-size: 1.5rem; font-weight: bold; margin-top: 1rem; margin-bottom: 0.5rem; color: #1e293b; }
+        .content-area h3 { font-size: 1.25rem; font-weight: bold; margin-top: 0.8rem; margin-bottom: 0.4rem; color: #334155; }
+        .content-area ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; }
+        .content-area ol { list-style-type: decimal; padding-left: 1.5rem; margin-bottom: 1rem; }
+        .content-area li { margin-bottom: 0.25rem; }
+        .content-area p { margin-bottom: 1rem; line-height: 1.6; }
+        .content-area strong { font-weight: 600; color: #0f172a; }
+        .pronunciation-mark { font-family: 'Lucida Sans Unicode', 'Arial Unicode MS', sans-serif; color: #64748b; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen text-gray-800 font-sans">
+
+    <!-- API Key Modal (Shown if no key) -->
+    <div id="apiKeyModal" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white p-8 rounded-xl shadow-2xl max-w-md w-full mx-4">
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">Setup API Key</h2>
+            <p class="text-gray-600 mb-6">To use this dictionary, you need a Google Gemini API Key. The key is stored locally in your browser.</p>
+            <input type="password" id="apiKeyInput" placeholder="Paste your API Key here" class="w-full p-3 border border-gray-300 rounded-lg mb-4 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+            
+            <label class="block text-sm font-medium text-gray-700 mb-1">AI Model Name</label>
+            <input type="text" id="modelNameInput" placeholder="gemini-1.5-pro" value="gemini-1.5-pro" class="w-full p-3 border border-gray-300 rounded-lg mb-6 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+            
+            <button onclick="saveApiKey()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition">Start Using Dictionary</button>
+            <p class="text-xs text-gray-400 mt-4 text-center">Get a key at <a href="https://aistudio.google.com/app/apikey" target="_blank" class="text-blue-500 hover:underline">Google AI Studio</a></p>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="max-w-4xl mx-auto p-4 md:p-8">
+        
+        <!-- Header -->
+        <header class="flex justify-between items-center mb-8">
+            <div class="flex items-center gap-3">
+                <div class="bg-blue-600 text-white p-2 rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+                    </svg>
+                </div>
+                <h1 class="text-2xl font-bold text-gray-900">Smart Dictionary</h1>
+            </div>
+            <button onclick="showSettings()" class="text-gray-500 hover:text-gray-700 p-2 rounded-full hover:bg-gray-200 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.115 1.115 0 0 1-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 0 1 0 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.212 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.115 1.115 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 0 1 0-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.115 1.115 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281Z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                </svg>
+            </button>
+        </header>
+
+        <!-- Search Area -->
+        <div class="bg-white p-2 rounded-xl shadow-sm border border-gray-200 mb-8 sticky top-4 z-10">
+            <div class="flex flex-col gap-2">
+                <textarea id="searchInput" rows="2" placeholder="Type a word, phrase, sentence, or paste a passage to check grammar..." class="w-full p-3 rounded-lg focus:outline-none text-lg resize-y" onkeydown="handleEnter(event)"></textarea>
+                <div class="flex justify-end gap-2">
+                    <button onclick="handleSearch()" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                        </svg>
+                        <span>Dictionary</span>
+                    </button>
+                    <button onclick="handleGrammarCheck()" class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2 rounded-lg font-semibold transition flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
+                        </svg>
+                        <span>Fix Grammar</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading State -->
+        <div id="loadingState" class="hidden flex-col items-center justify-center py-12">
+            <div class="loader mb-4"></div>
+            <p class="text-gray-500 animate-pulse">Consulting Gemini Pro...</p>
+        </div>
+
+        <!-- Results Area -->
+        <div id="resultContainer" class="hidden space-y-6">
+            
+            <!-- Main Word/Phrase Card -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 md:p-8">
+                <div class="flex flex-col md:flex-row md:items-baseline gap-4 mb-6 border-b pb-4 border-gray-100">
+                    <h2 id="displayWord" class="text-4xl font-bold text-gray-900"></h2>
+                    <div class="flex items-center gap-3">
+                        <span id="pronunciation" class="pronunciation-mark text-xl text-gray-500"></span>
+                        <button onclick="speakWord()" class="p-2 rounded-full bg-blue-50 text-blue-600 hover:bg-blue-100 transition" title="Listen">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 0 1 0 12.728M16.463 8.288a5.25 5.25 0 0 1 0 7.424M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="explanationContent" class="content-area space-y-4 text-lg text-gray-700">
+                    <!-- Content will be injected here -->
+                </div>
+            </div>
+
+        </div>
+        
+        <!-- Helper Text -->
+        <div id="emptyState" class="text-center py-12 text-gray-400">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-16 h-16 mx-auto mb-4 text-gray-300">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+            </svg>
+            <p class="text-lg">Enter a word to get started.</p>
+            <p class="text-sm mt-2">Try searching for "Serendipity", "Break the ice", or "I *love* coding".</p>
+        </div>
+
+    </div>
+
+    <script>
+        // State
+        let currentMode = 'dictionary'; // 'dictionary' or 'grammar'
+        
+        // Initialization
+        document.addEventListener('DOMContentLoaded', () => {
+            checkApiKey();
+            
+            // Check for query parameter from new window opens
+            const urlParams = new URLSearchParams(window.location.search);
+            const query = urlParams.get('q');
+            if (query) {
+                document.getElementById('searchInput').value = query;
+                // Execute search if key exists
+                if (localStorage.getItem('geminiApiKey')) {
+                    performSearch(query);
+                }
+            }
+        });
+
+        // API Key Management
+        function checkApiKey() {
+            const key = localStorage.getItem('geminiApiKey');
+            if (!key) {
+                document.getElementById('apiKeyModal').classList.remove('hidden');
+            } else {
+                document.getElementById('apiKeyModal').classList.add('hidden');
+            }
+        }
+
+        function saveApiKey() {
+            const keyInput = document.getElementById('apiKeyInput');
+            const modelInput = document.getElementById('modelNameInput');
+            
+            const key = keyInput.value.trim();
+            const model = modelInput.value.trim() || 'gemini-1.5-pro';
+
+            if (key) {
+                localStorage.setItem('geminiApiKey', key);
+                localStorage.setItem('geminiModelName', model);
+                document.getElementById('apiKeyModal').classList.add('hidden');
+            } else {
+                alert('Please enter a valid API Key.');
+            }
+        }
+
+        function showSettings() {
+            document.getElementById('apiKeyInput').value = localStorage.getItem('geminiApiKey') || '';
+            document.getElementById('modelNameInput').value = localStorage.getItem('geminiModelName') || 'gemini-1.5-pro';
+            document.getElementById('apiKeyModal').classList.remove('hidden');
+        }
+
+        function handleEnter(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                // If the input is short, assume dictionary search. If long, user might want grammar check.
+                // But to avoid confusion, let's default to Search if they just hit Enter.
+                // Or maybe we check the last used button? No, too complex.
+                // Let's just default to Dictionary Search.
+                handleSearch();
+            }
+        }
+
+        // --- Dictionary Search Logic ---
+        
+        function handleSearch() {
+            const term = document.getElementById('searchInput').value.trim();
+            if (term) {
+                performSearch(term);
+            }
+        }
+
+        async function performSearch(term) {
+            currentMode = 'dictionary';
+            prepareUI();
+            
+            try {
+                const apiKey = localStorage.getItem('geminiApiKey');
+                if (!apiKey) { showSettings(); return; }
+
+                const prompt = constructDictionaryPrompt(term);
+                const data = await callGemini(apiKey, prompt);
+                renderDictionaryResult(term, data);
+
+            } catch (error) {
+                handleError(error);
+            } finally {
+                document.getElementById('loadingState').classList.replace('flex', 'hidden');
+            }
+        }
+
+        function constructDictionaryPrompt(term) {
+            const isSentence = term.includes('*') || term.split(' ').length > 6;
+            const isPhrase = !isSentence && term.split(' ').length > 1;
+            let contextInstruction = "";
+            
+            if (isSentence) {
+                contextInstruction = `The user provided a sentence: "${term}". Focus on explaining the meaning of the sentence, especially words surrounded by asterisks '*'. Explain the context.`;
+            } else if (isPhrase) {
+                contextInstruction = `The user provided a phrase or idiom: "${term}". Explain its meaning, origin (why it is used like that), and provide practical examples.`;
+            } else {
+                contextInstruction = `The user provided a word: "${term}". Provide the IPA pronunciation. Explain all possible meanings in simple English. Provide real examples for each meaning.`;
+            }
+
+            return `
+                You are a helpful, simple English dictionary powered by Gemini.
+                ${contextInstruction}
+                
+                IMPORTANT INSTRUCTIONS:
+                1. Use simple English that is very easy to understand.
+                2. Return the response in valid JSON format ONLY. Do not include markdown formatting like \`\`\`json.
+                3. The JSON structure must be:
+                {
+                    "word": "The term being defined (or sentence)",
+                    "pronunciation": "IPA string (if applicable, else empty)",
+                    "sections": [
+                        {
+                            "title": "Meaning / Definition / Context",
+                            "content": "The explanation text."
+                        },
+                        {
+                            "title": "Examples",
+                            "items": ["Example sentence 1", "Example sentence 2"]
+                        },
+                        {
+                            "title": "Origin / Usage Notes", 
+                            "content": "Explanation of origin or specific usage nuances (optional)"
+                        }
+                    ]
+                }
+            `;
+        }
+
+        // --- Grammar Check Logic ---
+
+        function handleGrammarCheck() {
+            const term = document.getElementById('searchInput').value.trim();
+            if (term) {
+                performGrammarCheck(term);
+            }
+        }
+
+        async function performGrammarCheck(text) {
+            currentMode = 'grammar';
+            prepareUI();
+
+            try {
+                const apiKey = localStorage.getItem('geminiApiKey');
+                if (!apiKey) { showSettings(); return; }
+
+                const prompt = constructGrammarPrompt(text);
+                const data = await callGemini(apiKey, prompt);
+                renderGrammarResult(text, data);
+
+            } catch (error) {
+                handleError(error);
+            } finally {
+                document.getElementById('loadingState').classList.replace('flex', 'hidden');
+            }
+        }
+
+        function constructGrammarPrompt(text) {
+            return `
+                Act as an expert English editor and language tutor.
+                Analyze the following text: "${text}"
+
+                Tasks:
+                1. Identify and fix all grammar errors, unnatural expressions, typos, and awkward phrasing.
+                2. Provide the fully corrected text.
+                3. Explain EVERY change you made in detail (why it was wrong, why the new version is better).
+
+                Output Format (JSON ONLY):
+                {
+                    "corrected": "The complete corrected text.",
+                    "changes": [
+                        {
+                            "original": "original text segment",
+                            "new": "corrected text segment",
+                            "explanation": "Detailed explanation of the grammar rule or style improvement."
+                        }
+                    ]
+                }
+            `;
+        }
+
+        // --- Shared Logic ---
+
+        function prepareUI() {
+            document.getElementById('loadingState').classList.replace('hidden', 'flex');
+            document.getElementById('resultContainer').classList.add('hidden');
+            document.getElementById('emptyState').classList.add('hidden');
+        }
+
+        function handleError(error) {
+            console.error('Error:', error);
+            alert('Failed to fetch data. Please check your API Key or try again.');
+        }
+
+        async function callGemini(apiKey, prompt) {
+            const modelName = localStorage.getItem('geminiModelName') || 'gemini-1.5-pro';
+            const url = `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${apiKey}`;
+            
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    contents: [{ parts: [{ text: prompt }] }],
+                    generationConfig: { temperature: 0.2 }
+                })
+            });
+
+            if (!response.ok) {
+                const err = await response.json();
+                throw new Error(err.error?.message || 'API request failed');
+            }
+
+            const data = await response.json();
+            let text = data.candidates[0].content.parts[0].text;
+            
+            // Robust JSON extraction
+            text = text.replace(/```json/g, '').replace(/```/g, '');
+            const firstBrace = text.indexOf('{');
+            const lastBrace = text.lastIndexOf('}');
+            if (firstBrace !== -1 && lastBrace !== -1) {
+                text = text.substring(firstBrace, lastBrace + 1);
+            }
+            
+            return JSON.parse(text);
+        }
+
+        // --- Rendering ---
+
+        function renderDictionaryResult(term, data) {
+            const displayWordEl = document.getElementById('displayWord');
+            const pronunciationEl = document.getElementById('pronunciation');
+            const contentEl = document.getElementById('explanationContent');
+
+            displayWordEl.innerText = data.word || term;
+            
+            // Handle pronunciation
+            if (data.pronunciation) {
+                pronunciationEl.innerText = `/${data.pronunciation}/`;
+                pronunciationEl.classList.remove('hidden');
+                document.querySelector('button[onclick="speakWord()"]').classList.remove('hidden');
+            } else {
+                pronunciationEl.classList.add('hidden');
+                // Hide speak button if long text
+                if (term.split(' ').length > 4) {
+                    document.querySelector('button[onclick="speakWord()"]').classList.add('hidden');
+                } else {
+                    document.querySelector('button[onclick="speakWord()"]').classList.remove('hidden');
+                }
+            }
+
+            contentEl.innerHTML = '';
+
+            if (data.sections) {
+                data.sections.forEach(section => {
+                    if (!section.content && (!section.items || section.items.length === 0)) return;
+                    
+                    const sectionDiv = document.createElement('div');
+                    sectionDiv.className = 'mb-6';
+                    
+                    const title = document.createElement('h3');
+                    title.className = 'text-lg font-bold text-gray-800 mb-2';
+                    title.innerText = section.title;
+                    sectionDiv.appendChild(title);
+
+                    if (section.content) {
+                        const p = document.createElement('p');
+                        p.className = 'text-gray-700 leading-relaxed';
+                        p.innerHTML = makeClickable(section.content);
+                        sectionDiv.appendChild(p);
+                    }
+
+                    if (section.items && section.items.length > 0) {
+                        const ul = document.createElement('ul');
+                        ul.className = 'list-disc pl-5 space-y-1 mt-2 text-gray-600 bg-gray-50 p-4 rounded-lg border border-gray-100';
+                        section.items.forEach(item => {
+                            const li = document.createElement('li');
+                            li.innerHTML = makeClickable(item);
+                            ul.appendChild(li);
+                        });
+                        sectionDiv.appendChild(ul);
+                    }
+                    contentEl.appendChild(sectionDiv);
+                });
+            }
+            document.getElementById('resultContainer').classList.remove('hidden');
+        }
+
+        function renderGrammarResult(originalText, data) {
+            const displayWordEl = document.getElementById('displayWord');
+            const pronunciationEl = document.getElementById('pronunciation');
+            const contentEl = document.getElementById('explanationContent');
+            const speakBtn = document.querySelector('button[onclick="speakWord()"]');
+
+            displayWordEl.innerText = "Grammar Check";
+            pronunciationEl.classList.add('hidden');
+            speakBtn.classList.add('hidden'); // Hide speak button for grammar check
+
+            contentEl.innerHTML = '';
+
+            // Section 1: Corrected Text
+            const correctedDiv = document.createElement('div');
+            correctedDiv.className = 'mb-8 bg-emerald-50 p-6 rounded-xl border border-emerald-100';
+            correctedDiv.innerHTML = `
+                <h3 class="text-lg font-bold text-emerald-900 mb-3 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd" />
+                    </svg>
+                    Corrected Version
+                </h3>
+                <p class="text-lg text-gray-800 leading-relaxed font-medium">${makeClickable(data.corrected)}</p>
+            `;
+            contentEl.appendChild(correctedDiv);
+
+            // Section 2: Changes
+            if (data.changes && data.changes.length > 0) {
+                const changesDiv = document.createElement('div');
+                changesDiv.className = 'space-y-4';
+                changesDiv.innerHTML = '<h3 class="text-lg font-bold text-gray-800 mb-4">Detailed Fixes</h3>';
+
+                data.changes.forEach(change => {
+                    const item = document.createElement('div');
+                    item.className = 'bg-white border border-gray-200 rounded-lg p-4 shadow-sm';
+                    item.innerHTML = `
+                        <div class="flex flex-col md:flex-row md:items-center gap-2 mb-2 text-sm">
+                            <div class="bg-red-100 text-red-700 px-2 py-1 rounded line-through decoration-red-500">${change.original}</div>
+                            <div class="hidden md:block text-gray-400">→</div>
+                            <div class="bg-green-100 text-green-700 px-2 py-1 rounded font-semibold">${change.new}</div>
+                        </div>
+                        <p class="text-gray-600 text-sm md:text-base mt-2">${makeClickable(change.explanation)}</p>
+                    `;
+                    changesDiv.appendChild(item);
+                });
+                contentEl.appendChild(changesDiv);
+            } else {
+                const noChangesDiv = document.createElement('div');
+                noChangesDiv.className = 'text-center text-gray-500 py-4';
+                noChangesDiv.innerText = "No grammar errors found! Great job.";
+                contentEl.appendChild(noChangesDiv);
+            }
+
+            document.getElementById('resultContainer').classList.remove('hidden');
+        }
+
+        // Utility: Make text clickable
+        function makeClickable(text) {
+            if (!text) return '';
+            const escapeHtml = (unsafe) => {
+                return unsafe
+                     .replace(/&/g, "&amp;")
+                     .replace(/</g, "&lt;")
+                     .replace(/>/g, "&gt;")
+                     .replace(/"/g, "&quot;")
+                     .replace(/'/g, "&#039;");
+            }
+
+            // Split by spaces but preserve common punctuation for better UX?
+            // For simplicity, split by space.
+            return text.split(/\s+/).map(word => {
+                const escapedWord = escapeHtml(word);
+                const scriptWord = word.replace(/'/g, "\\'"); 
+                return `<span class="clickable-word" onclick="wordClicked('${scriptWord}')">${escapedWord}</span>`;
+            }).join(' ');
+        }
+
+        function wordClicked(rawWord) {
+            // Clean the word: remove punctuation
+            const cleanWord = rawWord.replace(/^[^\w]+|[^\w]+$/g, '');
+            if (cleanWord && cleanWord.length > 1) {
+                // Open in new window with query parameter
+                const url = new URL(window.location.href);
+                url.searchParams.set('q', cleanWord);
+                window.open(url.toString(), '_blank');
+            }
+        }
+
+        function speakWord() {
+            // If in grammar mode, speak the corrected text? No, button is hidden in grammar mode.
+            const text = document.getElementById('displayWord').innerText;
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'en-US';
+            window.speechSynthesis.speak(utterance);
+        }
+
+    </script>
+</body>
+</html>

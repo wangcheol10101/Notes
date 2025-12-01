@@ -530,6 +530,19 @@ However, if there is an Indirect Object in the sentence, the hidden subject shif
     > I told John where to go. (I told John where he (John) should go.)  
     > The teacher taught us how to write. (The teacher taught us how we should write.)  
 
+## Noun Complement Clause (Appositive(同位格) Clause)  
+A Noun Complement Clause is a clause that renames or defines the content of a noun.  
+It doesn't tell you which noun (like an adjective does); it tells you what the noun is. Noun = Clause.  
+> The belief **that the earth is flat** is dangerous.  
+While "that" is the most common connector, Noun Complements can sometimes start with other words if the abstract noun implies a question.  
+> The question **whether we should go** remains.  
+
+**Difference from Relative Clause**  
+- The Relative Clause (The Noun MUST have a role in that clause)  
+    > The report **that he wrote** is false.  
+- The Noun Complement Clause (The Noun has NO role in that clause)  
+    > The report **that he stole money** is false.  
+
 ## Adverbial Nouns  
 **The "Invisible Preposition" Rule**  
 In English, certain nouns allow us to drop the preposition that usually comes before them.  
@@ -546,5 +559,37 @@ In English, certain nouns allow us to drop the preposition that usually comes be
 - Manner (Answering "How")  
     > Don't look at me [in] that way.  
 
+## Elliptical Clause  
+- Adverbial Clauses  
+    The Rule: You can omit the **Subject and the Verb "Be"** if:  
+        - The Subject of the dependent clause is the same as the Subject of the main clause.  
+        - The verb is a form of "to be" (am, is, are, was, were).  
+    > While [he was] reading, he fell asleep.  
+    > If [it is] possible, please send it today.  
+    > Though [she was] tired, she kept working.  
+    > Be careful when [you are] crossing the street.  
+    If the subjects are different, you cannot omit.  
+- Comparative Clauses  
+    The Rule: You can omit the verb phrase if it repeats the main verb. You can sometimes omit the subject if it is abstract/generic.  
+    > He runs as fast as I [run].  
+    > She is taller than I [am].  
+    > Fill out the form as [it is shown] in the example.  
+- Relative Clauses  
+    The Rule: You can omit the Relative Pronoun (who, which, that) and the Verb "Be" together.  
+    > The man [who is] standing there is my boss.  
+    > The ideas [which were] suggested by him were good.  
+- Coordinate Clauses  
+    This happens in compound sentences connected by and, but, or.  
+    The Rule: If the verb is identical in both clauses, you can omit the verb in the second clause.  
+    > John lives in New York, and Mary [lives] in London.  
+- Verb Phrase Ellipsis  
+    The Rule: You keep the Auxiliary Verb (do, have, will, be, can) and omit the rest of the predicate.  
+    > Did you fix the database? -> I did [fix the database].  
+    > I haven't seen the movie, but she has [seen the movie].  
+    > You shouldn't do that. -> I know I shouldn't [do that].  
+- Noun Clauses  
+    The Rule: You can omit the conjunction "that" if the noun clause is the Direct Object of the verb.  
+    > I think [that] it is true.  
 
-
+## Extraposition  
+## Complementizer  
