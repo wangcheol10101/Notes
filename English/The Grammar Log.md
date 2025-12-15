@@ -1,12 +1,31 @@
+## Types of Verb Complements  
+Verb complements are categorized based on what kind of verb they follow (action verbs or linking verbs) and what function they serve.  
+- Direct Object  
+    This follows a transitive action verb.  
+    > She kicked the ball.  
+- Indirect Object  
+    > He gave **me** a gift.  
+- Subject Complement  
+    This follows a linking verb (like is, become, seem, smell). It describes or renames the subject of the sentence.  
+    > He is a teacher.(Renames the subject.)  
+    > He seems tired.(Describes the subject.)  
+- Object Complement  
+    This follows a Direct Object and adds more information about that object (renaming it or describing its state).  
+    > They elected him president. (Renames the object "him.")  
+    > The news made her sad. (Describes the state of the object "her.")  
+- Prepositional Complement(Prepositional Object)  
+    Some verbs act as a unit with a specific preposition. These are often called prepositional verbs.  
+    > She listened to the music.  
+    > I agree with you.  
+    Some linguists consider "rely on" to be a single phrasal verb unit (a **transitive multi-word verb**). If analyzed that way, "me" would be the Direct Object. However, in standard sentence analysis, "on me" is a Prepositional Complement.  
 
-
-## Infinitive (不定式)
+## Infinitive (不定式)  
 
 **Finite VS Infinitive**
 - “finite” verbs are those that are limited by person, number, tense, and mood (e.g., I walk, she walks, they walked).
 - The infinitive, by contrast, is not tied to a subject or specific time—it’s “unlimited.” It doesn’t change form based on who is doing the action or when it happens.
 
-**Functions of Infinitive Clauses**
+**Functions of Infinitive Clauses**  
 - As Subjects  
     > To travel the world has always been her dream.  
 - As Subject Complements  
@@ -15,7 +34,7 @@
 - As Direct Objects  
     > I want to learn Spanish.  
     > She promised to help us.  
-- As Verb Complements
+- As Verb Complements  
     Common verbs that take infinitive clauses as complements   
     - Desire/intention  
         want, wish, hope, plan, intend, decide  
@@ -51,10 +70,10 @@
     > To repeat, this approach is not recommended.  
     > To be clear, I didn’t mean that.  
 
-**Types of Infinitive Clauses**
+**Types of Infinitive Clauses**  
 - Full (To-) Infinitive Clauses  
     Most common form: to + base verb  
-    > I plan to call her tomorrow.
+    > I plan to call her tomorrow.  
 - Bare Infinitive Clauses  
     Used after:  
     - Causative verbs: make, let, have  
@@ -63,8 +82,8 @@
         > <ins>I saw him leave.</ins>  
     - Modal verbs: can, could, will, would, shall, should, may, might, must  
         > You must go now.  
-    - had better, would rather
-        > You had better leave.
+    - had better, would rather  
+        > You had better leave.  
 - Perfect Infinitive  
     to have + past participle  
     Indicates the action happened before the main verb.  
@@ -80,16 +99,14 @@
     > The report needs to be submitted by Friday.  
     > He hopes to be invited to the party.  
 - Perfect Passive Infinitive  
-    to have been + past participle
+    to have been + past participle  
     > The house seems to have been abandoned for years.  
 
 **Split Infinitives**  
-A split infinitive occurs when an adverb or adverbial phrase is placed between "to" and the verb:
-> She decided to quickly leave.
+A split infinitive occurs when an adverb or adverbial phrase is placed between "to" and the verb:  
+> She decided to quickly leave.  
 
----
-
-## Gerunds(动名词)
+## Gerunds(动名词)  
 
 A gerund is a verb form that ends in -ing and functions as a **noun** in a sentence.(Gerunds can do anything a noun can do)  
 
@@ -100,7 +117,7 @@ A gerund is a verb form that ends in -ing and functions as a **noun** in a sente
 > His habit, biting his nails, annoys his mom. (Appositive(同位格) (renaming a noun))  
 
 **Gerund with a Possessive (or Object) Noun/Pronoun**  
-When a gerund has a "doer" (someone performing the action), we often use a possessive noun or pronoun before it:
+When a gerund has a "doer" (someone performing the action), we often use a possessive noun or pronoun before it:  
 > I appreciate your helping me. ✅ (formal/correct)  
 > I appreciate you helping me. ✅ (common in informal speech)  
 > His singing was amazing. ✅ (formal/correct)	  
@@ -131,8 +148,8 @@ Some verbs almost always take a gerund as their object.
 
 **Gerund vs. Infinitive**  
 Some verbs can take either a gerund or an infinitive, but the meaning may change.  
-- Same Meaning
-    like, love, hate, prefer, begin, start, continue
+- Same Meaning  
+    like, love, hate, prefer, begin, start, continue  
     > I like to swim. = I like swimming.  
     > She started to cry. = She started crying.  
 - Different Meaning  
@@ -175,11 +192,11 @@ To make a gerund negative, add not before it
     being + past participle 
     > She hates being interrupted.  
     > He complained about being overcharged.  
-- Perfect Gerund
-    having + past participle 
+- Perfect Gerund  
+    having + past participle  
     > She denied having stolen the money.  
     > He was praised for having saved the child.  
-- Perfect Passive Gerund
+- Perfect Passive Gerund  
     having been + past participle  
     > He was accused of having been involved in the scandal.  
 
@@ -197,7 +214,7 @@ The -ing form turns the clause into a noun phrase
     > It would be nice if you came.  
 - Polite Suggestions / Soft Opinions  
     > It would be better to wait.  
-- Future in the Past
+- Future in the Past  
     When reporting or narrating something that was in the future relative to a past time.  
     > He said he would be late.  
     > I knew it would be difficult.  
@@ -207,7 +224,7 @@ The -ing form turns the clause into a noun phrase
     Used to express a preference politely.  
     > I would be happy to help.  
 
-## Relative Clause 
+## Relative Clause  
 A relative modifies a noun — it works like a long adjective.   
 
 **Common Relative Pronouns**  
@@ -243,10 +260,10 @@ It replaces the noun completely — acts as a noun clause.
 
 ## Participle  
 A participle is a verb form used as an **adjective (to describe a noun)** or as part of a verb phrase.  
-- Present participle
+- Present participle  
     -ing form  
     shows ongoing action or describes nouns  
-- Past participle
+- Past participle  
     usually -ed, -en, or irregular form  
     shows completed action or describes nouns  
 
@@ -257,7 +274,7 @@ A participle is a verb form used as an **adjective (to describe a noun)** or as 
     > The broken window needs repair.  
     It functions like a reduced relative clause  
     > The base table that is being created -> Reduced to “the base table being created.”  
-- As adverbs
+- As adverbs  
     > It generally has two closely related meanings **depending on the context**.  
 - As participial phrases  
     These describe or **add information about a noun or about the whole sentence**.  
@@ -285,11 +302,11 @@ A participle is a verb form used as an **adjective (to describe a noun)** or as 
         You saw the person in the middle of the action, not necessarily the whole thing.  
 
 **Gerund vs. Present Participle**  
-Ask:
-→ “Is it being used as a thing (noun)?” → Gerund
-→ “Is it being used to describe something or as a tense?” → Participle
+Ask:  
+→ “Is it being used as a thing (noun)?” → Gerund  
+→ “Is it being used to describe something or as a tense?” → Participle  
 
-## Prepositional phrase
+## Prepositional phrase  
 A prepositional phrase is a group of words that:  
 - begins with a preposition (like in, on, at, by, with, from, about, after, before, etc.)  
 - and ends with the **object of the preposition (a noun, pronoun, or noun phrase)**.  
@@ -332,7 +349,7 @@ A prepositional phrase is a group of words that:
         > They elected him as president.  
         > I regard her as a friend.  
 
-## Object Complement
+## Object Complement  
 An object complement is a word or phrase (noun, adjective, or infinitive ...) that comes after the direct object and gives more information about that object — it renames it or describes its state or result.  
 - Noun  
     > They elected him **leader**.  
@@ -398,7 +415,7 @@ A clause introduced by a **subordinating conjunction**, which cannot stand alone
 A relative-like clause is a clause that **modifies a noun or noun phrase** (like a relative/adjective clause) **but is introduced by words other than the classic relative pronouns**(it may use as, as if, as though, the way, the manner instead of standard relative pronouns).  
 > I’ll start with the relational model as Codd originally defined it.  
 
-## Comparative Clause
+## Comparative Clause  
 A comparative clause is a subordinate clause introduced by a comparative word or phrase (like than, as … as, the more … the more, etc.) to complete a comparison.  
 
 **Basic structure**  
@@ -448,7 +465,7 @@ A prepositional verb is a combination of a verb + a preposition. Together, they 
 - The Preposition is Fixed  
     English usually dictates exactly which preposition goes with which verb. There is often no logical reason for this; it must be memorized.  
 
-**Common Examples**
+**Common Examples**  
 > I am waiting for a package.  
 > He asked for a glass of water.  
 > I need to talk to your manager.  
@@ -515,7 +532,7 @@ Like a noun clause, the Wh-Infinitive functions as a noun.
 > I don't know what I should do. -> I don't know what to do.  
 > Can you tell me how I can get there? -> Can you tell me how to get there?  
 
-**Crucial Rules**
+**Crucial Rules**  
 - You cannot use "why" with an infinitive. You must use a full clause.  
     > I don't know why to leave. ❌  
     > I don't know why I should leave. ✔️  
@@ -591,5 +608,124 @@ In English, certain nouns allow us to drop the preposition that usually comes be
     The Rule: You can omit the conjunction "that" if the noun clause is the Direct Object of the verb.  
     > I think [that] it is true.  
 
+## Phrasal Modals  
+Phrasal Modals are fixed expressions that function like auxiliary verbs to express modal meanings (necessity, preference, probability, etc.).  
+- Had better  
+    Strong advice or warning. It implies that there will be negative consequences if the action is not taken.  
+    > You had better leave before the rain starts.  
+    > He’d better not be late again.  
+- Would rather  
+    Preference  
+    > I would rather stay home than go out.  
+    If you are speaking about someone else, the verb changes to the past tense.  
+    > I would rather you stayed home.  
+- Have got to  
+    Necessity or obligation. It is very similar to "must" or "have to." This is more informal and emphatic than "have to."  
+    > I have got to (I've got to) finish this paper tonight.  
+- Be to (am to / is to / are to)  
+    Formal obligation, official schedules, or destiny.  
+    > Instruction/Order: You are to wait here until the manager arrives.  
+    > Schedule: The Prime Minister is to visit Japan next week.  
+    > Destiny: They said goodbye, never knowing they were to meet again years later.  
+- Be supposed to  
+    > Expectation/Rule: You are supposed to take off your shoes inside.  
+    > Hearsay/Belief: This movie is supposed to be very scary. (People say it is scary).  
+    Often implies that the expectation differs from reality  
+- Be about to  
+    Imminent future. Something will happen very soon  
+    > I am about to leave; I'll call you back.  
+    > She was about to cry when he interrupted her.  
+- Be likely to / Be unlikely to  
+    Probability  
+    > The price is likely to rise.  
+    > He is unlikely to accept the offer.  
+- Be due to  
+    Scheduled or expected at a specific time.  
+    > The bus is due to arrive at 5:00.  
+    > The baby is due to be born in May.  
+
 ## Extraposition  
+Extraposition is a syntactic mechanism in English where a "heavy" or complex element is moved (extraposed) from its normal position to the end of the sentence.  
+To fill the empty space left behind, we insert a dummy subject (usually "it").  
+English generally dislikes heavy, long subjects at the start of a sentence. We prefer to get to the main verb quickly.  
+- Subject Extraposition  
+    It moves a subject clause to the end.  
+    - To-Infinitives  
+        > It is difficult to learn English.  
+    - That-Clauses  
+        > It is surprising that he failed the test.  
+    - Wh-Clauses  
+        > It is a mystery who stole the money.  
+- Object Extraposition  
+    This occurs with Complex Transitive Verbs **(verbs that take a direct object + an object complement)**, such as make, find, consider, think, believe.  
+    Unlike Subject Extraposition (which is often optional), Object Extraposition is often mandatory  
+    > Incorrect: I found [to solve the puzzle] easy.  
+    > Correct: I found it easy [to solve the puzzle].  
+    Subject: I  
+    Verb: Found  
+    Direct Object (Dummy): It  
+    Object Complement: Easy  
+    Real Direct Object: To solve the puzzle  
+- Relative Clause    
+    Sometimes, we move a relative clause away from the noun it modifies. This usually happens if the verb is very short.  
+    > A man walked in **who was wearing a bright yellow suit**.  
+
 ## Complementizer  
+## How to determine the correct article (indefinite or definite) and number (singular or plural) for a noun in a sentence  
+- Is the noun Countable or Uncountable?  
+    Countable Nouns: They have both singular and plural forms.  
+    Uncountable Nouns: They usually only have a singular form and cannot use "a" or "an."  
+- Is the noun Specific or General?  
+    - Specific (Definite)  Use "THE"  
+        Use The when the listener knows exactly which specific item you are talking about.  
+        > Mentioned before: "I saw a dog. The dog was barking."  
+        > Unique (Only one exists): "The sun," "The President."  
+        > Defined by context: "Close the door." (The specific door in this room).  
+        "The" works for Singular, Plural, and Uncountable nouns.  
+    - General (Indefinite) Use "A/AN" or "Zero Article"  
+        Use these when talking about something for the first time, or when talking about any member of a group, not a specific one.  
+        > Singular Countable: Use A/An. ("I need a pen." - Any pen will do).  
+        > Plural Countable: Use No Article (Zero Article). ("I like cats." - Cats in general).  
+        > Uncountable: Use No Article. ("I need water." - Some amount of water).  
+- Singular vs. Plural  
+    When making general statements about a whole category (Generalizations), you often have a choice, but the meaning changes slightly.  
+    - The "Zero Plural" (Most Common)  
+        Use the Plural form with No Article. This is the most natural way to talk about things in general.  
+        > Dogs are loyal animals.  
+    - The "Representative Singular"  
+        Use A/An with a Singular noun. This treats one item as a representative of the whole group.  
+        > A dog is a loyal animal. (Meaning: Any dog you find will be loyal)  
+    - The "Scientific Singular"  
+        Use The with a Singular noun. This is formal and used mostly in biology or technical fields to describe a species or invention.  
+        > The tiger is in danger of extinction. (The species, not one specific tiger).  
+
+## The way to distinguish between complements and adjuncts.    
+- The "Content" vs. "Aboutness" Distinction  
+    The strongest test for a Noun Complement is **whether the phrase defines the content of the noun (what the noun is) or just the topic (what the noun is about)**.  
+    - Complement  
+        > The question **of whether we should leave** is difficult.  
+        The text in bold is the question itself.  
+    - Modifier (Adjunct)  
+        > I have a question regarding your email.  
+        The phrase "regarding your email" is not the question itself. The actual question might be "When did you send it?" or "Did you attach the file?"  
+- The Omission Test  
+    Complements are often required to make the sentence grammatical or to keep the meaning of the head word intact. Adjuncts can be removed without "breaking" the sentence.  
+    - Complement: The phrase is required by the verb or noun.  
+        > He put the book on the table.  
+    - Adjunct: The phrase is optional.  
+        > He read the book on the table.  
+- The Iteration (Stacking) Test  
+    You can stack as many adjuncts as you want, but you usually can only have one complement (per semantic argument).  
+    - Complements  
+        > The student of physics of chemistry. -- 2 Complements = Wrong  
+        You must use a conjunction: "The student of physics and chemistry."  
+    - Adjuncts  
+        > I saw the man in the park on Tuesday with a telescope.  
+- Semantic Selection  
+    Complements are "licensed" (allowed/required) by the specific meaning of the head word. Adjuncts are free agents.  
+    - Complement: The word rely requires an "on" phrase. The word wonder requires a question clause. The specific preposition is often dictated by the head (e.g., "fond of," "reliant on").  
+        An adjunct can usually use many different prepositions depending on the meaning (location, time, manner), but a complement uses a specific preposition demanded by the verb.  
+        > He wasted time on the game. Because the verb "waste" dictates that you must use "on" to describe the activity, the phrase is tightly bound to the verb. Therefore, it is a complement.  
+    - Adjunct: The phrase "in the morning" can be applied to cooking, running, sleeping, dying, singing, etc. The head word doesn't care; the adjunct adds meaning regardless of the head.  
+
+
